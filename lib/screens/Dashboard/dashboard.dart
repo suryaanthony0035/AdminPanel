@@ -37,6 +37,7 @@ class DashboardScreen extends StatelessWidget {
                         padding: EdgeInsets.all(defaultPadding),
                         decoration: BoxDecoration(
                           color: secondaryColor,
+                          // color: Colors.white,
                           borderRadius: const BorderRadius.all(
                             Radius.circular(10),
                           ),

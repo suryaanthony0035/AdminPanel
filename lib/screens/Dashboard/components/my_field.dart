@@ -23,10 +23,11 @@ class Myfield extends StatelessWidget {
             ),
             ElevatedButton.icon(
               style: TextButton.styleFrom(
+                  backgroundColor: Color(0xFFFF3C50),
                   padding: EdgeInsets.symmetric(
-                horizontal: defaultPadding * 1.5,
-                vertical: defaultPadding,
-              )),
+                    horizontal: defaultPadding * 1.5,
+                    vertical: defaultPadding,
+                  )),
               onPressed: () {},
               icon: Icon(Icons.add),
               label: Text("Add New"),

@@ -1,3 +1,4 @@
+import 'package:adminpanel/screens/addons%20management/addon_main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -9,53 +10,67 @@ class SideMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: Colors.white,
       child: SingleChildScrollView(
         child: Column(
           children: [
             DrawerHeader(
               child: Image.asset(
-                "assets/images/BusiBeez_Logo-01.png",
+                "assets/images/BBLOG SVG.png",
                 height: 250,
                 width: 250,
               ),
             ),
             DrawerListMenu(
-              title: "DashBoard",
+              title: "Application Management",
               svgSrc: "assets/icons/menu_dashbord.svg",
               press: () {},
             ),
             DrawerListMenu(
-              title: "Transaction",
+              title: "Plan Mangement",
               svgSrc: "assets/icons/menu_tran.svg",
               press: () {},
             ),
             DrawerListMenu(
-              title: "Task",
+              title: "Addon Management",
               svgSrc: "assets/icons/menu_task.svg",
-              press: () {},
+              press: () {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => AddonMain()));
+              },
             ),
             DrawerListMenu(
-              title: "Documents",
+              title: "Package Management",
               svgSrc: "assets/icons/menu_doc.svg",
               press: () {},
             ),
             DrawerListMenu(
-              title: "Store",
+              title: "Menu Management",
               svgSrc: "assets/icons/menu_store.svg",
               press: () {},
             ),
             DrawerListMenu(
-              title: "Notification",
+              title: "Mobile Menu",
               svgSrc: "assets/icons/menu_notification.svg",
               press: () {},
             ),
             DrawerListMenu(
-              title: "Profile",
+              title: "Web Menu",
               svgSrc: "assets/icons/menu_profile.svg",
               press: () {},
             ),
             DrawerListMenu(
-              title: "Settings",
+              title: "Feed Management",
+              svgSrc: "assets/icons/menu_setting.svg",
+              press: () {},
+            ),
+            DrawerListMenu(
+              title: "Catagory Management",
+              svgSrc: "assets/icons/menu_setting.svg",
+              press: () {},
+            ),
+            DrawerListMenu(
+              title: "Slider Management",
               svgSrc: "assets/icons/menu_setting.svg",
               press: () {},
             ),
@@ -79,17 +94,20 @@ class DrawerListMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      onTap: press,
-      horizontalTitleGap: 0.0,
-      leading: SvgPicture.asset(
-        svgSrc,
-        color: Colors.white54,
-        height: 16,
-      ),
-      title: Text(
-        title,
-        style: TextStyle(color: Colors.white54),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: ListTile(
+        onTap: press,
+        horizontalTitleGap: 0.0,
+        leading: SvgPicture.asset(
+          svgSrc,
+          color: Colors.black,
+          height: 16,
+        ),
+        title: Text(
+          title,
+          style: TextStyle(color: Colors.black),
+        ),
       ),
     );
   }
