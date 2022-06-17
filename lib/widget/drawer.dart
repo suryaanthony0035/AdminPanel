@@ -1,4 +1,5 @@
 import 'package:adminpanel/screens/addons%20management/addon_main.dart';
+import 'package:adminpanel/screens/plans_management.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -29,14 +30,19 @@ class SideMenu extends StatelessWidget {
             DrawerListMenu(
               title: "Plan Mangement",
               svgSrc: "assets/icons/menu_tran.svg",
-              press: () {},
+              press: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const PlansManageMent()));
+              },
             ),
             DrawerListMenu(
               title: "Addon Management",
               svgSrc: "assets/icons/menu_task.svg",
               press: () {
-                Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => AddonMain()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const AddonMain()));
               },
             ),
             DrawerListMenu(

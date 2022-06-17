@@ -1,4 +1,3 @@
-
 import 'package:adminpanel/screens/main/main_screen.dart';
 import 'package:adminpanel/style/colors.dart';
 import 'package:flutter/material.dart';
@@ -15,12 +14,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Admin Panel',
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: bgColor,
-        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
-            .apply(bodyColor: Colors.white),
-        canvasColor: secondaryColor,
-      ),
+      // theme: ThemeData.dark().copyWith(
+      //   scaffoldBackgroundColor: bgColor,
+      //   textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
+      //       .apply(bodyColor: Colors.white),
+      //   canvasColor: secondaryColor,
+      // ),
       home: MainScreen(),
     );
   }
