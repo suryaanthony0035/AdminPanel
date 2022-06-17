@@ -1,7 +1,8 @@
-import 'package:adminpanel/screens/Dashboard/components/storage_Info_card.dart';
+import 'package:adminpanel/style/colors.dart';
+import 'package:adminpanel/widget/dashboard/storage_Info_card.dart';
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
+
 import 'chart.dart';
 
 class storageDetails extends StatelessWidget {

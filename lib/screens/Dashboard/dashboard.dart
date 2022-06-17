@@ -1,14 +1,16 @@
-import 'package:adminpanel/constants.dart';
+
 import 'package:adminpanel/models/recentfiles.dart';
+
+
+import 'package:adminpanel/style/colors.dart';
+import 'package:adminpanel/widget/dashboard/header.dart';
+import 'package:adminpanel/widget/dashboard/my_field.dart';
+import 'package:adminpanel/widget/dashboard/storage_detail.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'components/chart.dart';
-import 'components/header.dart';
-import 'components/my_field.dart';
-import 'components/storage_Info_card.dart';
-import 'components/storage_detail.dart';
+
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({Key? key}) : super(key: key);
