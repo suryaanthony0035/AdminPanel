@@ -1,12 +1,9 @@
-import 'package:adminpanel/screens/Authentication/admin_login.dart';
-import 'package:adminpanel/widget/plans_management/dialogBox.dart';
 import 'package:adminpanel/widget/plans_management/popupmenuButtons.dart';
 
 import 'package:flutter/material.dart';
 
 import 'package:adminpanel/style/colors.dart';
 import 'package:adminpanel/style/textstyles.dart';
-import 'package:adminpanel/widget/plans_management/action_menu_items.dart';
 
 class ListCards extends StatefulWidget {
   final String index;
