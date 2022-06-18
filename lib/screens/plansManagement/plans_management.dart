@@ -99,7 +99,7 @@ class _PlansManageMentState extends State<PlansManageMent> {
 
 //row Title
 
-                  RowTitle(),
+                  const RowTitle(),
 
 //row Text
                   Expanded(

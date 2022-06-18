@@ -1,3 +1,7 @@
+import 'package:adminpanel/screens/Authentication/admin_login.dart';
+import 'package:adminpanel/widget/plans_management/dialogBox.dart';
+import 'package:adminpanel/widget/plans_management/popupmenuButtons.dart';
+
 import 'package:flutter/material.dart';
 
 import 'package:adminpanel/style/colors.dart';
@@ -27,16 +31,6 @@ class ListCards extends StatefulWidget {
 }
 
 class _ListCardsState extends State<ListCards> {
-  PopupMenuItem<MenuItem> buildItem(MenuItem menuItem) => PopupMenuItem(
-        child: Row(
-          children: [
-            Icon(menuItem.icon, color: Colors.black, size: 20),
-            const SizedBox(width: 12),
-            Text(menuItem.text),
-          ],
-        ),
-      );
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -133,42 +127,12 @@ class _ListCardsState extends State<ListCards> {
                   child: ListViewDetails(
                     text: Row(
                       children: [
-                        PopupMenuButton<MenuItem>(
-                          itemBuilder: (context) => [
-                            ...MenuItems.itemsFirst.map(buildItem).toList(),
-                          ],
-                        ),
-                        // FittedBox(
-                        //   child: Container(
-                        //     padding: const EdgeInsets.symmetric(
-                        //         vertical: 5, horizontal: 15),
-                        //     decoration: BoxDecoration(
-                        //         color: Colors.grey.withOpacity(0.2),
-                        //         borderRadius: BorderRadius.circular(5)),
-                        //     child: Center(
-                        //       child: Text(
-                        //         "Edit",
-                        //         style: Textstyles.rowText,
-                        //       ),
-                        //     ),
-                        //   ),
-                        // ),
+                        PlansManagementPopupButton(),
                       ],
                     ),
                   ),
                 ),
               ]),
-              // Text(
-              //   "Discription",
-              //   style: Textstyles.rowTitle,
-              // ),
-              // Padding(
-              //   padding: const EdgeInsets.only(top: 10),
-              //   child: Text(
-              //     "Busibeez is a service that connects small business owners to each other as well as social media and local advertising services, delivering simple solutions. ",
-              //     style: Textstyles.rowText,
-              //   ),
-              // ),
             ],
           ),
         ),
@@ -190,13 +154,6 @@ class ListViewDetails extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // Padding(
-        //   padding: EdgeInsets.only(bottom: 20),
-        //   child: Text(
-        //     title,
-        //     style: Textstyles.rowTitle,
-        //   ),
-        // ),
         Padding(
           padding: EdgeInsets.only(bottom: 15),
           child: text,

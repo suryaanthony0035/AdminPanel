@@ -1,5 +1,5 @@
 import 'package:adminpanel/screens/addons%20management/addon_main.dart';
-import 'package:adminpanel/screens/plans_management.dart';
+import 'package:adminpanel/screens/plansManagement/plans_management.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

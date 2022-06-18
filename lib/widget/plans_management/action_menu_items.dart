@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
 
 class MenuItem {
-  String text;
+  final String text;
   final IconData icon;
-  MenuItem({
+  const MenuItem({
     required this.text,
     required this.icon,
   });
 }
 
 class MenuItems {
-  static List<MenuItem> itemsFirst = [
+  static const List<MenuItem> itemsFirst = [
     itemView,
     itemEdit,
     itemDelete,
   ];
 
-  static MenuItem itemView = MenuItem(
+  static const MenuItem itemView = MenuItem(
     icon: Icons.visibility_outlined,
     text: 'View',
   );
-  static MenuItem itemEdit = MenuItem(
+  static const MenuItem itemEdit = MenuItem(
     icon: Icons.edit,
     text: 'Edit',
   );
 
-  static MenuItem itemDelete = MenuItem(
+  static const MenuItem itemDelete = MenuItem(
     icon: Icons.delete_outline,
     text: 'Delete',
   );
