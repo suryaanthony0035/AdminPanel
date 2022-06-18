@@ -12,6 +12,7 @@ class AppColors {
   static Color get mainColor => const Color(0xff009688);
   static Color get rubyReds => const Color(0xffFF3C50);
   static Color get textGrey => const Color(0xff212121);
+  static Color get statusColor => const Color(0xff015727);
 
   //colors
   static Color get white => const Color(0xffffffff);

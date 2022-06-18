@@ -12,7 +12,7 @@ class MenuItem {
 class MenuItems {
   static List<MenuItem> itemsFirst = [
     itemView,
-    viewDiscription,
+    itemEdit,
     itemDelete,
   ];
 
@@ -20,10 +20,11 @@ class MenuItems {
     icon: Icons.visibility_outlined,
     text: 'View',
   );
-  static MenuItem viewDiscription = MenuItem(
-    icon: Icons.delete_outline,
-    text: 'Discription',
+  static MenuItem itemEdit = MenuItem(
+    icon: Icons.edit,
+    text: 'Edit',
   );
+
   static MenuItem itemDelete = MenuItem(
     icon: Icons.delete_outline,
     text: 'Delete',

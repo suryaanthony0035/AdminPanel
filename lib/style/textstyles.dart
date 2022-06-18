@@ -13,7 +13,7 @@ abstract class Textstyles {
   static TextStyle get rowTitle {
     return TextStyle(
       color: AppColors.mainColor,
-      fontSize: 24,
+      fontSize: 20,
       fontWeight: FontWeight.w500,
     );
   }
@@ -21,7 +21,7 @@ abstract class Textstyles {
   static TextStyle get rowText {
     return TextStyle(
       color: AppColors.textGrey,
-      fontSize: 20,
+      fontSize: 15,
     );
   }
 }
