@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:adminpanel/style/colors.dart';
 import 'package:adminpanel/style/textstyles.dart';
+import 'package:adminpanel/widget/plans_management/buttons.dart';
 
 import 'package:adminpanel/widget/plans_management/list_carts.dart';
 import 'package:adminpanel/widget/drawer.dart';
@@ -61,38 +62,9 @@ class _PlansManageMentState extends State<PlansManageMent> {
                     ],
                   ),
                   const SizedBox(height: 40),
-                  FittedBox(
-                    child: Container(
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        color: AppColors.rubyReds,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                            width: 20,
-                            height: 20,
-                            decoration: BoxDecoration(
-                                color: AppColors.white,
-                                borderRadius: BorderRadius.circular(5)),
-                            child: Icon(
-                              Icons.add,
-                              color: AppColors.rubyReds,
-                              size: 18,
-                            ),
-                          ),
-                          const SizedBox(width: 10),
-                          Text(
-                            "Add Plans",
-                            style: TextStyle(
-                              color: AppColors.white,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
+                  IconsButtonWidget(
+                    text: "Add Plans",
+                    iconData: Icons.add,
                   ),
                   const SizedBox(height: 30),
 

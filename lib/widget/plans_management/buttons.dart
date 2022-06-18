@@ -33,3 +33,50 @@ class DialogButton extends StatelessWidget {
     );
   }
 }
+
+class IconsButtonWidget extends StatelessWidget {
+  String text;
+  IconData iconData;
+   IconsButtonWidget({
+    Key? key,
+    required this.text,
+    required this.iconData,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return FittedBox(
+      child: Container(
+        padding: const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          color: AppColors.rubyReds,
+          borderRadius: BorderRadius.circular(8),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              width: 20,
+              height: 20,
+              decoration: BoxDecoration(
+                  color: AppColors.white,
+                  borderRadius: BorderRadius.circular(5)),
+              child: Icon(
+                iconData,
+                color: AppColors.rubyReds,
+                size: 18,
+              ),
+            ),
+            const SizedBox(width: 10),
+            Text(
+              text,
+              style: TextStyle(
+                color: AppColors.white,
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
