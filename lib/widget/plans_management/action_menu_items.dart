@@ -15,6 +15,10 @@ class MenuItems {
     itemEdit,
     itemDelete,
   ];
+  static const List<MenuItem> itemsSecond = [
+    itemEdit,
+    itemDelete,
+  ];
 
   static const MenuItem itemView = MenuItem(
     icon: Icons.visibility_outlined,

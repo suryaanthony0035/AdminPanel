@@ -123,7 +123,7 @@ class _ListCardsState extends State<ListCards> {
                 Expanded(
                   child: ListViewDetails(
                     text: Row(
-                      children: [
+                      children: const [
                         PlansManagementPopupButton(),
                       ],
                     ),
@@ -151,6 +151,7 @@ class ListViewDetails extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        
         Padding(
           padding: EdgeInsets.only(bottom: 15),
           child: text,

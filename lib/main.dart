@@ -1,6 +1,7 @@
 import 'package:adminpanel/screens/Authentication/admin_login.dart';
 import 'package:adminpanel/screens/main/main_screen.dart';
 import 'package:adminpanel/screens/plansManagement/plans_management.dart';
+import 'package:adminpanel/screens/plansManagement/view_plansManagement.dart';
 import 'package:adminpanel/style/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       //       .apply(bodyColor: Colors.white),
       //   canvasColor: secondaryColor,
       // ),
-      home: PlansManageMent(),
+      home: ViewPlansManagement(),
     );
   }
 }

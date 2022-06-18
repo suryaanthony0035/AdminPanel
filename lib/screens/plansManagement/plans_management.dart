@@ -40,7 +40,6 @@ class _PlansManageMentState extends State<PlansManageMent> {
           //   child: SideMenu(),
           // ),
           Expanded(
-            flex: 8,
             child: Padding(
               padding: const EdgeInsets.only(
                 top: 30,

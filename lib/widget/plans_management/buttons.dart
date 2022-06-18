@@ -5,6 +5,7 @@ import 'package:adminpanel/style/colors.dart';
 class DialogButton extends StatelessWidget {
   String name;
   Color color;
+
   DialogButton({
     Key? key,
     required this.name,
