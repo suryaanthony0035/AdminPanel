@@ -1,3 +1,4 @@
+import 'package:adminpanel/layout/screens/Dashboard/dashboard.dart';
 import 'package:adminpanel/layout/screens/plansManagement/plans_management.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       //       .apply(bodyColor: Colors.white),
       //   canvasColor: secondaryColor,
       // ),
-      home: PlansManageMent(),
+      home: DashboardScreen(),
     );
   }
 }
