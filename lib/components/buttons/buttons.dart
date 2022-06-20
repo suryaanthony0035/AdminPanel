@@ -37,7 +37,7 @@ class TextColorButton extends StatelessWidget {
 class IconsButtonWidget extends StatelessWidget {
   String text;
   IconData iconData;
-   IconsButtonWidget({
+  IconsButtonWidget({
     Key? key,
     required this.text,
     required this.iconData,
