@@ -30,13 +30,13 @@ class DialogBoxWidgets {
                 children: [
                   GestureDetector(
                     onTap: () => Navigator.pop(context),
-                    child: DialogButton(
+                    child: TextColorButton(
                       name: 'cancel',
                       color: AppColors.rubyReds,
                     ),
                   ),
                   const SizedBox(width: 30),
-                  DialogButton(
+                  TextColorButton(
                     name: 'Delete',
                     color: AppColors.mainColor,
                   )
