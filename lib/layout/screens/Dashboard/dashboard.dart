@@ -1,16 +1,13 @@
-
+import 'package:adminpanel/components/dashboard/header.dart';
+import 'package:adminpanel/components/dashboard/my_field.dart';
+import 'package:adminpanel/components/dashboard/storage_detail.dart';
 import 'package:adminpanel/models/recentfiles.dart';
 
-
 import 'package:adminpanel/style/colors.dart';
-import 'package:adminpanel/widget/dashboard/header.dart';
-import 'package:adminpanel/widget/dashboard/my_field.dart';
-import 'package:adminpanel/widget/dashboard/storage_detail.dart';
+
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -54,7 +51,7 @@ class DashboardScreen extends StatelessWidget {
                               child: DataTable(
                                 horizontalMargin: 0,
                                 columnSpacing: defaultPadding,
-                                columns: [
+                                columns: const [
                                   DataColumn(
                                     label: Text("File Name"),
                                   ),

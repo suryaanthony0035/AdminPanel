@@ -2,7 +2,7 @@ import 'dart:html';
 
 import 'package:adminpanel/style/colors.dart';
 import 'package:adminpanel/style/textstyles.dart';
-import 'package:adminpanel/widget/plans_management/buttons.dart';
+import 'package:adminpanel/components/buttons/buttons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

@@ -1,5 +1,5 @@
-import 'package:adminpanel/widget/plans_management/popupmenuButtons.dart';
 
+import 'package:adminpanel/components/plans_management/popupmenuButtons.dart';
 import 'package:flutter/material.dart';
 
 import 'package:adminpanel/style/colors.dart';

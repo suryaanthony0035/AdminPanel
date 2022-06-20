@@ -1,14 +1,17 @@
 import 'dart:html';
 import 'dart:ui';
 
+import 'package:adminpanel/components/plans_management/row_title.dart';
 import 'package:adminpanel/style/colors.dart';
 import 'package:adminpanel/style/textstyles.dart';
-import 'package:adminpanel/widget/plans_management/buttons.dart';
+import 'package:adminpanel/components/buttons/buttons.dart';
 
-import 'package:adminpanel/widget/plans_management/list_carts.dart';
-import 'package:adminpanel/widget/drawer.dart';
-import 'package:adminpanel/widget/plans_management/row_title.dart';
+
+import 'package:adminpanel/components/drawer.dart';
+
 import 'package:flutter/material.dart';
+
+import '../../../components/plans_management/list_carts.dart';
 
 class PlansManageMent extends StatefulWidget {
   const PlansManageMent({Key? key}) : super(key: key);

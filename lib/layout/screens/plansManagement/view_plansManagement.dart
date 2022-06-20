@@ -1,8 +1,9 @@
+import 'package:adminpanel/components/buttons/buttons.dart';
+import 'package:adminpanel/components/plans_management/popupmenuButtons.dart';
 import 'package:flutter/material.dart';
 
 import 'package:adminpanel/style/colors.dart';
 import 'package:adminpanel/style/textstyles.dart';
-import 'package:adminpanel/widget/plans_management/popupmenuButtons.dart';
 
 class ViewPlansManagement extends StatefulWidget {
   const ViewPlansManagement({Key? key}) : super(key: key);
@@ -11,9 +12,11 @@ class ViewPlansManagement extends StatefulWidget {
   State<ViewPlansManagement> createState() => _ViewPlansManagementState();
 }
 
-class _ViewPlansManagementState extends State<ViewPlansManagement> {
+class _ViewPlansManagementState extends State<ViewPlansManagement>
+    with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
+    TabController _tabController = TabController(length: 3, vsync: this);
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(
@@ -120,24 +123,9 @@ class _ViewPlansManagementState extends State<ViewPlansManagement> {
                           Expanded(
                             flex: 2,
                             child: ListViewDetails(
-                              text: FittedBox(
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical: 5, horizontal: 15),
-                                  decoration: BoxDecoration(
-                                      color:
-                                          Colors.greenAccent.withOpacity(0.2),
-                                      borderRadius: BorderRadius.circular(5)),
-                                  child: Center(
-                                    child: Text(
-                                      "status",
-                                      style: TextStyle(
-                                        color: AppColors.statusColor,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                  ),
-                                ),
+                              text: Text(
+                                "1 month",
+                                style: Textstyles.rowText,
                               ),
                             ),
                           ),
@@ -146,9 +134,24 @@ class _ViewPlansManagementState extends State<ViewPlansManagement> {
                             child: Padding(
                               padding: EdgeInsets.only(left: 20),
                               child: ListViewDetails(
-                                text: Text(
-                                  "1 month",
-                                  style: Textstyles.rowText,
+                                text: FittedBox(
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 5, horizontal: 15),
+                                    decoration: BoxDecoration(
+                                        color:
+                                            Colors.greenAccent.withOpacity(0.2),
+                                        borderRadius: BorderRadius.circular(5)),
+                                    child: Center(
+                                      child: Text(
+                                        "Public",
+                                        style: TextStyle(
+                                          color: AppColors.statusColor,
+                                          fontSize: 15,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
@@ -163,6 +166,37 @@ class _ViewPlansManagementState extends State<ViewPlansManagement> {
                     ],
                   ),
                 ),
+              ),
+            ),
+
+//featurs pricing users
+
+            Container(
+              width: 100,
+              height: 150,
+              color: AppColors.mainColor,
+              child: TabBar(
+                controller: _tabController,
+                labelColor: Colors.black,
+                unselectedLabelColor: Colors.grey,
+                tabs: const [
+                  Text("Features"),
+                  Text("Pricing"),
+                  Text("Users"),
+                ],
+              ),
+            ),
+
+            Container(
+              width: double.maxFinite,
+              height: 300,
+              child: TabBarView(
+                controller: _tabController,
+                children: [
+                  Text("Features"),
+                  Text("Pricing"),
+                  Text("Users"),
+                ],
               ),
             )
           ],
@@ -195,26 +229,10 @@ class CreatedDate extends StatelessWidget {
           style: TextStyle(fontSize: 12, color: AppColors.textGrey),
         ),
         const SizedBox(height: 5),
-        FittedBox(
-          child: Container(
-            padding: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-                color: AppColors.mainColor,
-                borderRadius: BorderRadius.circular(8),
-                boxShadow: [
-                  BoxShadow(
-                    offset: const Offset(1, 1),
-                    color: AppColors.textGrey.withOpacity(0.1),
-                  )
-                ]),
-            child: Center(
-              child: Text(
-                date,
-                style: TextStyle(color: AppColors.white),
-              ),
-            ),
-          ),
-        ),
+        DialogButton(
+          name: date,
+          color: AppColors.mainColor,
+        )
       ],
     );
   }

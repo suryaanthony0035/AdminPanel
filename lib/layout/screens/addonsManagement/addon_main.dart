@@ -1,12 +1,11 @@
+import 'package:adminpanel/components/addon_management/single_grid_info.dart';
+import 'package:adminpanel/models/addon_model.dart';
+import 'package:adminpanel/style/colors.dart';
+import 'package:adminpanel/style/textstyles.dart';
+
+import 'package:adminpanel/components/drawer.dart';
 import 'package:flutter/material.dart';
 
-import '../../models/addon_model.dart';
-import '../../models/myfiles.dart';
-import '../../style/colors.dart';
-import '../../style/textstyles.dart';
-import '../../widget/addon_management/single_grid_info.dart';
-import '../../widget/dashboard/file_info_card.dart';
-import '../../widget/drawer.dart';
 
 class AddonMain extends StatelessWidget {
   const AddonMain({Key? key}) : super(key: key);

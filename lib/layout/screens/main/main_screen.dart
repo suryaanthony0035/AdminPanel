@@ -1,9 +1,9 @@
-import 'package:adminpanel/screens/Dashboard/dashboard.dart';
+
+import 'package:adminpanel/layout/screens/Dashboard/dashboard.dart';
 import 'package:adminpanel/style/colors.dart';
+import 'package:adminpanel/components/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-import '../../widget/drawer.dart';
 
 class MainScreen extends StatelessWidget {
   @override

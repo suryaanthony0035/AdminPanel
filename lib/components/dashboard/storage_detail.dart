@@ -1,5 +1,5 @@
+import 'package:adminpanel/components/dashboard/storage_Info_card.dart';
 import 'package:adminpanel/style/colors.dart';
-import 'package:adminpanel/widget/dashboard/storage_Info_card.dart';
 import 'package:flutter/material.dart';
 
 
@@ -23,7 +23,7 @@ class storageDetails extends StatelessWidget {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
             "User Data Details",
             style: TextStyle(

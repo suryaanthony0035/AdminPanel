@@ -1,6 +1,6 @@
-import 'package:adminpanel/screens/plansManagement/view_plansManagement.dart';
-import 'package:adminpanel/widget/plans_management/action_menu_items.dart';
-import 'package:adminpanel/widget/plans_management/dialogBox.dart';
+import 'package:adminpanel/layout/screens/plansManagement/view_plansManagement.dart';
+import 'package:adminpanel/models/plansManagement/action_menu_items.dart';
+import 'package:adminpanel/layout/dialog/dialogBox.dart';
 import 'package:flutter/material.dart';
 
 class PlansManagementPopupButton extends StatelessWidget {

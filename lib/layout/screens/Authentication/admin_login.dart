@@ -1,5 +1,5 @@
 import 'package:adminpanel/style/colors.dart';
-import 'package:adminpanel/widget/app_text_field.dart';
+import 'package:adminpanel/components/textFields/app_text_field.dart';
 import 'package:flutter/material.dart';
 
 class AdminLogin extends StatefulWidget {
