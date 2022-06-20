@@ -6,7 +6,6 @@ import 'package:adminpanel/style/textstyles.dart';
 import 'package:adminpanel/components/drawer.dart';
 import 'package:flutter/material.dart';
 
-
 class AddonMain extends StatelessWidget {
   const AddonMain({Key? key}) : super(key: key);
 
@@ -77,16 +76,20 @@ class AddonMain extends StatelessWidget {
                   ),
                   SizedBox(height: defaultPadding),
                   GridView.builder(
-                    shrinkWrap: true,
-                    itemCount: addonlist.length,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 4,
-                        crossAxisSpacing: defaultPadding,
-                        childAspectRatio: 1.4),
-                    itemBuilder: (context, index) => AddonInfoSingle(
-                      addoninfo: addonlist[index],
-                    ),
-                  ),
+                      shrinkWrap: true,
+                      itemCount: 8,
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 4,
+                          crossAxisSpacing: defaultPadding,
+                          childAspectRatio: 1.4),
+                      itemBuilder: (context, index) => AddonInfoSingle(
+                            addon: "4 Location",
+                            description:
+                                '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                            price: '29',
+                            title: 'Location',
+                            month: '/- per month',
+                          ))
                   // SizedBox(height: defaultPadding),
                   // GridView.builder(
                   //   shrinkWrap: true,
