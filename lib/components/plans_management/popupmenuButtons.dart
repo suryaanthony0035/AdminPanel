@@ -25,8 +25,10 @@ class PlansManagementPopupButton extends StatelessWidget {
     void onSelected(BuildContext context, MenuItem items) {
       switch (items) {
         case MenuItems.itemView:
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => ViewPlansManagement()));
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const ViewPlansManagement()));
           break;
         case MenuItems.itemEdit:
           break;

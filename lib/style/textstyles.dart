@@ -11,7 +11,7 @@ abstract class Textstyles {
   }
 
   static TextStyle get rowTitle {
-    return TextStyle(
+    return const TextStyle(
       color: AppColors.mainColor,
       fontSize: 20,
       fontWeight: FontWeight.w500,
@@ -23,5 +23,12 @@ abstract class Textstyles {
       color: AppColors.textGrey,
       fontSize: 15,
     );
+  }
+
+  static TextStyle tablerowTitle(
+      {double fontSize = 14,
+      FontWeight fontWeight = FontWeight.w400,
+      Color color = AppColors.mainColor}) {
+    return TextStyle(color: color, fontSize: fontSize, fontWeight: fontWeight);
   }
 }

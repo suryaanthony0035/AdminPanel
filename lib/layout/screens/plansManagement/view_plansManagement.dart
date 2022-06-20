@@ -1,9 +1,13 @@
 import 'package:adminpanel/components/buttons/buttons.dart';
+import 'package:adminpanel/components/common/tabbar.dart';
 import 'package:adminpanel/components/plans_management/popupmenuButtons.dart';
+import 'package:adminpanel/layout/dataTables/plansManagement/featuresTable.dart';
 import 'package:flutter/material.dart';
 
 import 'package:adminpanel/style/colors.dart';
 import 'package:adminpanel/style/textstyles.dart';
+
+import '../../dialog/dialogBox.dart';
 
 class ViewPlansManagement extends StatefulWidget {
   const ViewPlansManagement({Key? key}) : super(key: key);
@@ -14,9 +18,59 @@ class ViewPlansManagement extends StatefulWidget {
 
 class _ViewPlansManagementState extends State<ViewPlansManagement>
     with TickerProviderStateMixin {
+  bool unSelectedLabelStyle = false;
+
+  List<Widget>? listData(BuildContext context) {
+    List<Widget>? data;
+    return data = [
+      Text(
+        "0",
+        style: Textstyles.tablerowTitle(color: AppColors.textGrey),
+      ),
+      Text(
+        "Plans Management",
+        style: Textstyles.tablerowTitle(color: AppColors.textGrey),
+      ),
+      Text(
+        "type",
+        style: Textstyles.tablerowTitle(color: AppColors.textGrey),
+      ),
+      Text(
+        "Qty",
+        style: Textstyles.tablerowTitle(color: AppColors.textGrey),
+      ),
+      Text(
+        "Module",
+        style: Textstyles.tablerowTitle(color: AppColors.textGrey),
+      ),
+      Text(
+        "Sub-Module",
+        style: Textstyles.tablerowTitle(color: AppColors.textGrey),
+      ),
+      Text(
+        "Default",
+        style: Textstyles.tablerowTitle(color: AppColors.textGrey),
+      ),
+      const InkWell(
+        child: Icon(
+          Icons.edit_outlined,
+        ),
+      ),
+      InkWell(
+        onTap: () {
+          DialogBoxWidgets.deleteDialogBox(context);
+        },
+        child: Icon(
+          Icons.delete_outline,
+        ),
+      ),
+    ];
+  }
+
   @override
   Widget build(BuildContext context) {
     TabController _tabController = TabController(length: 3, vsync: this);
+
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(
@@ -28,6 +82,7 @@ class _ViewPlansManagementState extends State<ViewPlansManagement>
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+//title
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -169,33 +224,147 @@ class _ViewPlansManagementState extends State<ViewPlansManagement>
               ),
             ),
 
+            const SizedBox(height: 30),
+
 //featurs pricing users
 
-            Container(
-              width: 100,
-              height: 150,
-              color: AppColors.mainColor,
-              child: TabBar(
-                controller: _tabController,
-                labelColor: Colors.black,
-                unselectedLabelColor: Colors.grey,
-                tabs: const [
-                  Text("Features"),
-                  Text("Pricing"),
-                  Text("Users"),
-                ],
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                TabbarHeader(
+                  tabController: _tabController,
+                  tabs: const [
+                    Text("Features"),
+                    Text("Pricing"),
+                    Text("Users"),
+                  ],
+                ),
+                Row(
+                  children: [
+                    IconsButtonWidget(
+                      iconData: Icons.filter_alt_outlined,
+                      text: "filter",
+                    ),
+                    const SizedBox(width: 20),
+                    IconsButtonWidget(
+                      iconData: Icons.add,
+                      text: "Add Features",
+                    ),
+                  ],
+                ),
+              ],
             ),
+            const SizedBox(height: 30),
 
+// Table
             Container(
               width: double.maxFinite,
-              height: 300,
+              height: 500,
               child: TabBarView(
                 controller: _tabController,
                 children: [
-                  Text("Features"),
-                  Text("Pricing"),
-                  Text("Users"),
+                  Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: AppColors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                color: AppColors.textGrey.withOpacity(0.2),
+                                offset: const Offset(2, 2),
+                              ),
+                            ]),
+                        child: tableRow1(AppColors.mainColor),
+                      ),
+                      const SizedBox(height: 10),
+                      Container(
+                        padding: const EdgeInsets.only(top: 20),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: AppColors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                offset: const Offset(1, 1),
+                                color: AppColors.textGrey.withOpacity(0.1),
+                              )
+                            ]),
+                        child: Column(
+                            children: List.generate(
+                          5,
+                          (index) => tableListRow1(datas: listData(context)),
+                        )),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: AppColors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                color: AppColors.textGrey.withOpacity(0.2),
+                                offset: const Offset(2, 2),
+                              ),
+                            ]),
+                        child: tableRow1(AppColors.mainColor),
+                      ),
+                      const SizedBox(height: 10),
+                      Container(
+                        padding: const EdgeInsets.only(top: 20),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: AppColors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                offset: const Offset(1, 1),
+                                color: AppColors.textGrey.withOpacity(0.1),
+                              )
+                            ]),
+                        child: Column(
+                            children: List.generate(
+                          5,
+                          (index) => tableListRow1(datas: listData(context)),
+                        )),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: AppColors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                color: AppColors.textGrey.withOpacity(0.2),
+                                offset: const Offset(2, 2),
+                              ),
+                            ]),
+                        child: tableRow1(AppColors.mainColor),
+                      ),
+                      const SizedBox(height: 10),
+                      Container(
+                        padding: const EdgeInsets.only(top: 20),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: AppColors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                offset: const Offset(1, 1),
+                                color: AppColors.textGrey.withOpacity(0.1),
+                              )
+                            ]),
+                        child: Column(
+                            children: List.generate(
+                          5,
+                          (index) => tableListRow1(datas: listData(context)),
+                        )),
+                      )
+                    ],
+                  ),
                 ],
               ),
             )
