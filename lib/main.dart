@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       //       .apply(bodyColor: Colors.white),
       //   canvasColor: secondaryColor,
       // ),
-      home: ViewPlansManagement(),
+      home: DashboardScreen(),
     );
   }
 }
