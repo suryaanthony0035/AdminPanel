@@ -1,6 +1,5 @@
-import 'package:adminpanel/layout/screens/Dashboard/dashboard.dart';
 import 'package:adminpanel/layout/screens/plansManagement/plans_management.dart';
-import 'package:adminpanel/layout/screens/plansManagement/view_plansManagement.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,13 +13,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Admin Panel',
-      // theme: ThemeData.dark().copyWith(
-      //   scaffoldBackgroundColor: bgColor,
-      //   textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
-      //       .apply(bodyColor: Colors.white),
-      //   canvasColor: secondaryColor,
-      // ),
-      home: DashboardScreen(),
+      home: PlansManageMent(),
     );
   }
 }

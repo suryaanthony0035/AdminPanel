@@ -9,9 +9,9 @@ const bgColor = Color(0xFF009688);
 const defaultPadding = 16.0;
 
 class AppColors {
-  static Color get mainColor => const Color(0xff009688);
+  static const Color mainColor = Color(0xff009688);
   static Color get rubyReds => const Color(0xffFF3C50);
-  static Color get textGrey => const Color(0xff212121);
+  static const Color textGrey = Color(0xff212121);
   static Color get statusColor => const Color(0xff015727);
 
   //colors
