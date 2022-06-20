@@ -229,7 +229,7 @@ class CreatedDate extends StatelessWidget {
           style: TextStyle(fontSize: 12, color: AppColors.textGrey),
         ),
         const SizedBox(height: 5),
-        DialogButton(
+        TextColorButton(
           name: date,
           color: AppColors.mainColor,
         )

@@ -1,5 +1,6 @@
 import 'package:adminpanel/layout/screens/Dashboard/dashboard.dart';
 import 'package:adminpanel/layout/screens/plansManagement/plans_management.dart';
+import 'package:adminpanel/layout/screens/plansManagement/view_plansManagement.dart';
 import 'package:flutter/material.dart';
 
 void main() {

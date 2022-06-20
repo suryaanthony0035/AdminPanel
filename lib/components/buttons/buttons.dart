@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:adminpanel/style/colors.dart';
 
-class DialogButton extends StatelessWidget {
+class TextColorButton extends StatelessWidget {
   String name;
   Color color;
 
-  DialogButton({
+  TextColorButton({
     Key? key,
     required this.name,
     required this.color,
