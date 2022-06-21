@@ -41,48 +41,8 @@ Table tableRow1(
 
 Table tableListRow1({
   Color? color = AppColors.textGrey,
- List<Widget>? datas,
+  List<Widget>? datas,
 }) {
-  List<Widget>? data = [
-    Text(
-      "0",
-      style: Textstyles.tablerowTitle(color: AppColors.textGrey),
-    ),
-    Text(
-      "Plans Management",
-      style: Textstyles.tablerowTitle(color: AppColors.textGrey),
-    ),
-    Text(
-      "type",
-      style: Textstyles.tablerowTitle(color: AppColors.textGrey),
-    ),
-    Text(
-      "Qty",
-      style: Textstyles.tablerowTitle(color: AppColors.textGrey),
-    ),
-    Text(
-      "Module",
-      style: Textstyles.tablerowTitle(color: AppColors.textGrey),
-    ),
-    Text(
-      "Sub-Module",
-      style: Textstyles.tablerowTitle(color: AppColors.textGrey),
-    ),
-    Text(
-      "Default",
-      style: Textstyles.tablerowTitle(color: AppColors.textGrey),
-    ),
-    const InkWell(
-      child: Icon(
-        Icons.edit_outlined,
-      ),
-    ),
-    const InkWell(
-      child: Icon(
-        Icons.delete_outline,
-      ),
-    ),
-  ];
   return Table(children: [
     TableRow(
       children: List.generate(

@@ -1,7 +1,4 @@
-import 'package:adminpanel/layout/screens/Dashboard/dashboard.dart';
 import 'package:adminpanel/layout/screens/main/main_screen.dart';
-
-import 'package:adminpanel/layout/screens/plansManagement/plans_management.dart';
 
 import 'package:flutter/material.dart';
 

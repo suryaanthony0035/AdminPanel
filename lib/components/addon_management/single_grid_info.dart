@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../models/addon_model.dart';
 import '../../style/colors.dart';
 
-import '../plans_management/list_carts.dart';
+import '../../layout/screens/plansManagement/widget/list_carts.dart';
 import '../plans_management/popupmenuButtons.dart';
 
 class AddonInfoSingle extends StatelessWidget {

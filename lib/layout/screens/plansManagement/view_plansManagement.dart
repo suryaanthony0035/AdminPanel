@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:adminpanel/components/buttons/buttons.dart';
 import 'package:adminpanel/components/common/tabbar.dart';
 import 'package:adminpanel/components/plans_management/popupmenuButtons.dart';
@@ -395,7 +397,7 @@ class CreatedDate extends StatelessWidget {
       children: [
         Text(
           text,
-          style: TextStyle(fontSize: 12, color: AppColors.textGrey),
+          style: const TextStyle(fontSize: 12, color: AppColors.textGrey),
         ),
         const SizedBox(height: 5),
         TextColorButton(

@@ -1,5 +1,5 @@
-
 import 'package:adminpanel/layout/screens/addonsManagement/addon_main.dart';
+import 'package:adminpanel/layout/screens/main/main_screen.dart';
 import 'package:adminpanel/layout/screens/plansManagement/plans_management.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -26,7 +26,10 @@ class SideMenu extends StatelessWidget {
             DrawerListMenu(
               title: "Application Management",
               svgSrc: "assets/icons/menu_dashbord.svg",
-              press: () {},
+              press: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MainScreen()));
+              },
             ),
             DrawerListMenu(
               title: "Plan Mangement",
